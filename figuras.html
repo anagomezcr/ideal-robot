@@ -40,31 +40,30 @@
 
     }
     .form1 {
-        height: 400px;
-        width: 300px;
+        height: 500px;
+        width: 350px;
         background: purple;
-        margin-left: 100px ;
+        margin: 130px 0 150px 100px;
         text-align: center;
         border-radius: 15px;
         border: 3px solid black;
     
     }
     .form2 {
-        height: 400px;
-        width: 300px;
+        height: 600px;
+        width: 400px;
         background: purple;
-        margin-left:50px ;
-        margin-right: 50px;
+        margin: 50px 50px 50px ;
         text-align: center;
         border-radius: 15px;
         border: 3px solid black;
        
     }
     .form3 {
-        height: 400px;
-        width: 300px;
+        height: 500px;
+        width: 350px;
         background: purple;
-        margin-right:100px ;
+        margin: 130px 100px 150px 0;
         text-align: center;
         border-radius: 15px;
         border: 3px solid black;
@@ -74,7 +73,6 @@
     .circulo {
         display: grid;
         color: white;
-        margin-bottom: 10px;
     }
     img {
         height: 90px;
@@ -93,6 +91,18 @@
        font-family: Arial, Helvetica, sans-serif; 
        font-weight: normal;       
    }
+   .respuesta {
+        height: 60px; 
+        width: 155px; 
+        background: purple;
+        margin: auto;
+        margin-top: 10px;
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 30px;
+        display: table;
+        border: 2px solid black;
+
+   }
    
     @media (max-width: 650px) {
         body {
@@ -101,13 +111,13 @@
         .form1 {
         background: #116530;
         margin: 30px;
-        height: 300px;
+        height: 450px;
         width: 300px;
         }
         .form2 {
         background: #116530;
         margin: 30px;
-        height: 400px;
+        height: 550px;
         width: 300px;
         }
         .form3 {
@@ -119,6 +129,9 @@
         .content {
        display: grid;
        justify-content: center;
+    }
+    .respuesta {
+        background: #116530;
     }
    
 }
@@ -140,17 +153,15 @@
             <label for="InputCuadrado" style="margin-top: 10px;">
                 CUADRADO
             </label>
-            <img src="https://cdn-icons-png.flaticon.com/512/136/136830.png" alt="cuadrado" img style="margin-top: 30px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/136/136830.png" alt="cuadrado" img style="margin-top: 30px; margin-bottom: 30px;">
 
             <label for="InputCuadrado">
-               <p font-size: small; font-family: Arial, Helvetica, sans-serif; font-weight: normal;>
-                Cuanto mide uno de sus lados
-                </p>
+               <p>Cuanto mide uno de sus lados</p>
             </label>
             
         </div >
             <div class="contenido">
-            <input id="InputCuadrado" type="number">
+            <input id="InputCuadrado" type="number"  placeholder="Escriba aquí valor lado" required style="width: 200px;">
             <button type="button" onclick="calcularPerimetroCuadrado()" style="margin: 10px 10px;">
                 Calcular el perimetro
             </button>
@@ -158,6 +169,12 @@
                 Calcular el área
             </button>
         </div >
+        <div class="respuesta">
+            <p>Resultado</p>
+        <p id="resPerimetroCuadrado" ></p>
+        <p id="resAreaCuadrado" ></p>
+    </div>
+    <a href="javascript:window.location.reload();" style="color: white;">Reset</a>
         </form>
     </div>
     <div class="form2">
@@ -166,18 +183,17 @@
             <label for="InputTriangulo" style="margin-top: 10px;">
                 TRIANGULO
             </label> 
-            <img src="https://cdn-icons-png.flaticon.com/512/13/13384.png" alt="cuadrado" img style="margin-top: 30px;">
-
+            <img src="https://cdn-icons-png.flaticon.com/512/13/13384.png" alt="cuadrado" img style="margin-top: 30px; margin-bottom: 30px;">
         </div>
         <div class="triangulolados">
-            <p style="margin-top: 20px;">Escribe cuanto mide lado1</p>
-            <input id="InputTriangulo" type="number">
-            <p>Escribe cuanto mide lado2</p>
-            <input id="InputTriangulo2" type="number">
+            <p style="margin-top: 20px;">Escribe cuanto mide lado 1</p>
+            <input id="InputTriangulo" type="number" placeholder="Escribe aquí lado 1">
+            <p>Escribe cuanto mide lado 2</p>
+            <input id="InputTriangulo2" type="number" placeholder="Escribe aquí lado 2">
             <p>Escribe cuanto mide base</Base></p>
-            <input id="InputTriangulo3" type="number">
+            <input id="InputTriangulo3" type="number" placeholder="Escribe aquí base">
             <p>Escribe cuanto mide altura</p>
-            <input id="InputTriangulo4" type="number">
+            <input id="InputTriangulo4" type="number"placeholder="Escribe aquí altura">
         </div>
             <button type="button" onclick="calcularPerimetroTriangulo()" style="margin: 10px 10px;">
                 Calcular el perimetro
@@ -185,6 +201,12 @@
             <button type="button" onclick="calcularAreaTriangulo()">
                 Calcular el área
             </button>
+            <div class="respuesta">
+                <p>Resultado</p>
+            <p id="resPerimetroTriangulo" ></p>
+            <p id="resAreaTriangulo" ></p>
+        </div>
+        <a href="javascript:window.location.reload();" style="color: white;">Reset</a>
         </form>
     </div>
     <div class="form3">
@@ -194,19 +216,25 @@
                 CIRCULO
                 
             </label>
-            <img src="https://cdn-icons-png.flaticon.com/512/32/32341.png" alt="cuadrado" img style="margin-top: 30px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/32/32341.png" alt="cuadrado" img style="margin-top: 30px; margin-bottom: 30px;">
 
-            <p font-size: small; font-family: Arial, Helvetica, sans-serif; font-weight: normal;>
-            Cuánto mide el radio
-            </p>
         </div>
-            <input id="InputCirculo" type="number">
+        <p style="color: white;">Cuanto mide el radio</p>
+            <input id="InputCirculo" type="number" placeholder="Escriba aquí el radio" required style="width: 200px;" >
             <button type="button" onclick="calcularPerimetroCirculo()" style="margin: 10px 10px;" >
                 Calcular el perimetro
             </button>
             <button type="button" onclick="calcularAreaCirculo()">
                 Calcular el área
             </button>
+            <div class="respuesta">
+                <p>Resultado</p>
+            <p id="resPerimetroCirculo" ></p>
+            <p id="resAreaCirculo" ></p>
+        </div>
+        <a href="javascript:window.location.reload();" style="color: white;">Reset</a>
+       
+
         </form>
     </div>
 
@@ -214,9 +242,15 @@
   <h3 >  
         <p>Este es el primer taller del curso práctico de JavaScript</p>
     </h3>
+
+    <input id="resultado" type="number" style="height: 10px; width: 10px;"></input>
+    <form action="">
+    </form>
     </section>
        </header>
     <script src="./figuras.js"></script>
     <script src="./figuras.css"></script>
+  
+        
 </body>
 </html>

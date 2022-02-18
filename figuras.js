@@ -43,24 +43,38 @@ function areaCirculo(radio) {
 }
 console.groupEnd("circulos");
 
+// código del triangulo isóceles
+console.group("triangulosIsoceles");
+function perimetroTrianguloIsoceles(lado1, lado2, base){
+    if (lado1 == lado2){
+    return lado1 + lado2 + base;}
+    else{
+        alert("Los lados deben ser iguales")
+    }
+}
+
+function areaTrianguloIsoceles(base, altura){
+    return  (base * altura) / 2;
+}
+// altura triángulo isóceles
+function alturaTrianguloIsoceles(lado1, base){
+    base = base/2;
+    return (Math.sqrt(((lado1 * lado1)) - (base * base))); }
+console.groupEnd();
 
 // Aquí interactuamos con el HTML
 function calcularPerimetroCuadrado(){
     const input =  document.getElementById("InputCuadrado");
     const value = input.value;
-
     const perimetro = perimetroCuadrado(value);
-    
     document.getElementById("resPerimetroCuadrado").innerHTML = "El perimetro es : " + perimetroCuadrado(value) ;
 }
 
 function calcularAreaCuadrado(){
     const input =  document.getElementById("InputCuadrado");
     const value = input.value;
-
     const area = areaCuadrado(value);
     document.getElementById("resAreaCuadrado").innerHTML = "El Area es : " + areaCuadrado(value) ;
-
 }
 
 // triangulo
@@ -105,4 +119,30 @@ function calcularAreaCirculo(){
     const area = areaCirculo(value);
     document.getElementById("resAreaCirculo").innerHTML = "El Area es : " +  areaCirculo(value);
 }
+// triangulo isóceles
+function calcularPerimetroTrianguloIsoceles(){
+    const input =  document.getElementById("InputTrianguloIsoceles");
+    const value = input.value;
+    const input2 = document.getElementById("InputTrianguloIsoceles2")
+    const value2 = input2.value;
+    const input3 = document.getElementById("InputTrianguloIsoceles3")
+    const value3 = input3.value;
+
+    const perimetro = perimetroTrianguloIsoceles(Number (value), Number (value2), Number (value3));
+    document.getElementById("resPerimetroTrianguloIsoceles").innerHTML = "El perimetro es : " +  perimetroTrianguloIsoceles(Number (value), Number (value2), Number (value3));
+
+    
+}
+
+function calcularAreaTrianguloIsoceles(){
+    const input = document.getElementById("InputTrianguloIsoceles")
+    const value = input.value;
+    const input3 = document.getElementById("InputTrianguloIsoceles3")
+    const value3 = input3.value;
+
+    const value5 = alturaTrianguloIsoceles(value, value3);
+    const area = areaTrianguloIsoceles(Number (value3), Number (value5));
+    document.getElementById("resAreaTrianguloIsoceles").innerHTML = "El Area es : " +   areaTrianguloIsoceles(Number (value3), Number (value5));
+}
+
 

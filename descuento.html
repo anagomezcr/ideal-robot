@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentajes y Descuentos | Curso práctico de JavaScript</title>
+    <style>
+        body {
+            
+            height: 100vh;
+            background: #EEEDDE;
+            display: grid;
+            justify-content: center;
+            margin: none;
+        }
+        h1 {
+            margin: auto;
+            text-align: center; 
+            font-family: cursive; 
+            font-size: 40px;
+        }
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; font-size: 25px;
+        }
+        .contenido {
+            height: 250px;
+            width: 600px;
+            background: white;
+            display: flex;
+            margin: auto;
+            border-radius: 1px;
+        }
+        img {
+            height: 150px;
+            width: 200px;
+            margin-top: 40px;
+        }
+        form {
+            border-left: red solid;
+        }
+        label{
+            font-size: 20px;
+            font-weight:bold;
+            font-family: Segoe UI;
+            padding: 1px;
+            margin: 10px;
+            margin-top: 20px;
+        }
+        form input {
+            font-size: 20px;
+            width: 300px;
+            padding:3px 10px;
+            border:1px solid #f6f6f6;
+            border-radius:3px;
+            background-color:#f6f6f6;
+        }
+        .calculo {
+            align-content: space-between;
+            text-align: center;
+            margin: 30px auto;
+        }
+        button {
+            background: red;
+            height: 100px;
+            width: 600px;
+            margin: 30px auto;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        #resultC {
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            font-size: 25px;
+        }
+        #resultP {
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            font-size: 25px;
+        }
+        nav {font-family: cursive;
+            font-weight: bold;
+            text-align: center; 
+            font-size: 15px;
+            width: 100%;
+            height: auto;
+            background: yellow;
+
+        }
+        @media (max-width: 650px) {
+        body {
+            margin: 0;
+            }
+        header h1 {
+            font-size: 25px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        .contenido {
+            height: 250px;
+            width: 300px;
+            background: white;
+            display: flex;
+            margin: auto;
+            border-radius: 10px;
+        }
+        img {
+            height:100px;
+            width: 100px;
+            margin-top: 70px;
+        }
+        label{
+            font-size: 15px;
+            margin: 5px;
+            margin-top: 10px;
+        }
+        form input {
+            font-size: 15px;
+            width: 150px;
+            padding:3px 5px;
+        }
+        button {
+            height: 110px;
+            width: 300px;
+            margin: 20px auto;
+            font-size: 18px;
+        }
+        #resultC {
+            height: 15px;
+            font-size: 15px;
+        }
+        #resultP {
+            height: 15px;
+            font-size: 15px;
+        }
+        nav {font-family: cursive;
+            font-weight: bold;
+            text-align: center; 
+            font-size: 15px;
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Porcentajes y Descuentos</h1>
+</header>
+<section>
+<h2>Cálcula el precio a pagar de tus productos con descuentos</h2>
+
+<div class="contenido">
+    <article style="background: red; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/1235/1235577.png" alt="cupon">
+    </article>
+<form action="" class="calculo">
+    <p>
+    <label for="InputPrice" >Escribe el precio:  </label>
+    <br><br>
+    <input id="InputPrice"  type="number" placeholder=" Precio" required>
+    <p> 
+    <label for="InputDiscount">Escribe el descuento:  </label>
+    <br><br>
+    <input id="InputDiscount" type="number" placeholder=" Descuento" required >
+</div>
+<div style="display: flex; flex-direction: row;">
+<button type="button" onclick="onClickButtonPriceDiscount()">Calcular el precio con el descuento</button>
+</div>
+<p id="resultC"></p>
+<p id="resultP"></p>
+</div>
+</form>
+</section>
+<nav >Este es el segundo taller del Curso Prácico de JavaScript.</nav>
+
+    <script src="./descuentos.js"></script>
+</body>
+</html>

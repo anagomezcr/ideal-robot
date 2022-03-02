@@ -13,3 +13,10 @@
 -Segundo paso: implementar las fórmulas en JavaScript.
 -Tercer pasO: crear funciones.
 -Cuarto paso: integrar JavaScrip con HTML.
+
+## Taller #3 Promedio, Mediana Y Moda
+
+-Primer paso: definir las fórmulas.
+-Segundo paso: implementar las fórmulas en JavaScript.
+-Tercer pasO: crear funciones.
+-Cuarto paso: integrar JavaScrip con HTML.

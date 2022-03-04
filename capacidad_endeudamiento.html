@@ -9,25 +9,26 @@
         body {
             height: 100vh;
             width: 100%;
-            display: flex;
+            text-align: center;
+            margin: 0;
         }
         .container {
             height: 50vh;
             width: 100%;
             text-align: center;
             background: #D3ECA7;
-            margin: 0;
+            margin-top:0;
             padding: 0;
             border-bottom: 3px solid black;
         }
         form {
-           
             margin: auto;
             background: #FFAD60;
             height: 400px;
             border-radius: 46px;
             border: 3px solid black;
             width: 600px;
+            margin-top: 40px
         }
         label {
             text-transform: capitalize;
@@ -52,6 +53,9 @@
             margin-top: 20px;
             margin: auto;
             width: 355px;
+        }
+        div section:nth-child(1) {
+            border-right: 2px solid black;
         }
         .buttom {
             flex-direction: column;
@@ -87,15 +91,64 @@
             margin-right: 20px;
             width: 150px;
         }
+        footer{
+            background: #D3ECA7;
+            margin-top: 380px;
+            height: 30px;
+            font-size: medium;
+            font-weight: bold;
+        }
+        @media (max-width: 650px) {
+        h1 {
+            font-size: large;
+            margin-top: 0;;
+            }
+        form {
+            width: auto;
+            height: 600px;
+            }
+        input {
+            width: 100px
+        }
+        .section1 {
+            flex-direction: column;
+            height: 400px;
+            }
+        section {
+            width: auto;
+            border-right: ;
+            }
+        div section:nth-child(1) {
+            border-right: none;
+        }
+        .result {
+            margin: 0;
+            height: 120px;
+            display: flex;
+            border: 0;
+            border-radius: 0;
+            flex-wrap: wrap;
+            }
+        h5 {
+            font-family: arial;
+            font-weight: bold;
+            border-left: 0;
+            margin-left: 10px;
+            width: 150px;
+        }
+        .section button:nth-child(2) {
+            height: auto;
+        }
+    }
     </style>
 </head>
 <body>
     <div class="container">
-    <h1>CAPACIDAD DE ENDEUDAMIENTO</h1>
+    <h1 style="margin-top: 10px;">CAPACIDAD DE ENDEUDAMIENTO</h1>
     
     <form action="">
         <div class="section1" >
-        <section style="border-right: 2px solid black;">
+        <section>
         <label for="">Name
             <br>
             <input type="text" id="Name">
@@ -125,7 +178,9 @@
         </div>
     </form>
 </div>
+<footer>Solución Reto</footer>
 </body>
+
 <script src="./capacidad_endeudoamiento.js"></script>
 
 </html>

@@ -11,16 +11,68 @@
             width: 100%;
             text-align: center;
             margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            display: inline;
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+        a {
+            display: block;
+            padding: 8px;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #111;           
+        }
+        li:last-child {
+            border-right: none;
+            float: right
+        }
+        .active {
+            background-color: #04AA6D;
+        }
+        .lista {
+            height: 100vh;
+            width: 20%;
+        }
+        img {
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+            margin-top: 40px;
         }
         .container {
             height: 50vh;
-            width: 100%;
-            text-align: center;
             background: #D3ECA7;
-            margin-top:0;
+            padding: 0;
+            justify-content: center;
+            border-bottom: 3px solid black;
+            text-shadow: 2px 4px 10px black;
+        }
+        .title_form {
+            height: 50vh;
+            background: #D3ECA7;
             padding: 0;
             border-bottom: 3px solid black;
-        }
+            text-shadow: 2px 4px 10px black;
+            display: flex;
+        }     
         form {
             margin: auto;
             background: #FFAD60;
@@ -80,16 +132,18 @@
             height: 120px;
             display: flex;
             justify-content: space-between;
-            border: 2px solid black;
             border-radius: 10px;
         }
         h5 {
-            font-family: arial;
             font-weight: bold;
+            border-left: 0;
+            font-family: arial;
+            margin-top: 10px;
+            width: 200px;
+            font-size: medium;
+            margin-left: auto;
+            margin-right: auto;
             border-left: 1px solid black;
-            margin-left: 20px;
-            margin-right: 20px;
-            width: 150px;
         }
         footer{
             background: #D3ECA7;
@@ -97,15 +151,64 @@
             height: 30px;
             font-size: medium;
             font-weight: bold;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+            border-top: 3px solid black;
+
         }
         @media (max-width: 650px) {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #f1f1f1;
+            height: 100%;
+            position: fixed;
+            overflow: auto;
+        }
+        li{
+            text-align: center;
+            border-bottom: 1px solid #555;
+        }
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #555;
+            color: white;
+        }
+        li:last-child {
+            border-bottom: none;
+            float:left;
+        }
+        .active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        .container {
+            height: 10vh;
+        }
         h1 {
+            font-family: sans-serif;
             font-size: large;
-            margin-top: 0;;
+            margin-top: 0;
+            letter-spacing: 2px;
+            text-shadow: 2px 4px 10px black;
             }
+        .lista {
+            width: 25%;
+        }
+        img {
+            height: 80px;
+            width: 80px;
+        }
         form {
             width: auto;
-            height: auto;
             margin: 40px 5px;
             }
         input {
@@ -130,14 +233,14 @@
             height: auto;
             text-align: start;
             margin-bottom: 15px;
-            margin-top: 5px;
+            margin-top: 20px;
             }
         h5 {
             font-family: arial;
             font-weight: bold;
             border-left: 0;
             font-family: arial;
-            margin-right: 20px;
+            margin-top: 10px;
             width: 150px;
         }
         .section button:nth-child(2) {
@@ -149,43 +252,55 @@
     }
     </style>
 </head>
-<body>
-    <div class="container">
-    <h1 style="margin-top: 10px;">CAPACIDAD DE ENDEUDAMIENTO</h1>
-    
-    <form action="">
-        <div class="section1" >
-        <section>
-        <label for="">Name
-            <br>
-            <input type="text" id="Name">
-            </label>
 
-        <label for=""><br><br>Ingresos Mensuales
-            <br>
-        <input type="number" id="Number1">
-        </label>
+<body>  
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="active" href="#about">About</a></li>
+          </ul>
+   
+    <div class="container"> 
+        <h1 style="padding: 10px; margin: 0;">CAPACIDAD DE ENDEUDAMIENTO</h1>
+        <div class="title_form">
+            <div class="lista">        
+                <img src="https://cdn-icons-png.flaticon.com/512/6915/6915120.png" alt="Calculadora">
+                <img src="https://cdn-icons-png.flaticon.com/512/584/584026.png" alt="cartera">
+                <img src="https://cdn-icons-png.flaticon.com/512/1804/1804434.png" alt="ahorro">
+            </div>
+            <form action="">
+                <div class="section1" >
+                    <section>
+                        <label for="">Name<br>
+                            <input type="text" id="Name">
+                        </label>
+                        <label for=""><br><br>Ingresos Mensuales<br>
+                            <input type="number" id="Number1">
+                        </label>
+                        <label for=""><br><br>Gastos Mensuales<br>
+                            <input type="number" id="Number2" >
+                        </label>
+                    </section>
 
-        <label for=""><br><br>Gastos Mensuales
-            <br>
-            <input type="number" id="Number2" >
-        </label>
-    </section>
-    <section class="buttom">
-          <button type="button" onclick="onclickcalcularEndeudamiento1()">subir datos</button>
-          <button type="button" onclick="onclickcalcularEndeudamiento2()">Calcular capadidad de endeudamiento</button>
-          <button onclick="onclickReset()">Borrar datos</button>
-        </section>
-    </div>
-        <div class="result">
-        <h5 id="NameUser"></h5>
-        <h5 id="salaryUser"></h5>
-        <h5 id="deudaUser"></h5>
-        <h5 id="calcularDeuda"></h5>
+                    <section class="buttom">
+                        <button type="button" onclick="onclickcalcularEndeudamiento1()">subir datos</button>
+                        <button type="button" onclick="onclickcalcularEndeudamiento2()">Calcular capadidad de endeudamiento</button>
+                        <button type="reset" onclick="onclickReset()">Borrar datos</button>
+                    </section>
+                </div>
+                <div class="result">
+                    <h5 id="NameUser"></h5>
+                    <h5 id="salaryUser"></h5>
+                    <h5 id="deudaUser"></h5>
+                    <h5 id="calcularDeuda"></h5>
+                </div>
+            </form>
         </div>
-    </form>
-</div>
-<footer>Solución Reto</footer>
+    </div>
+     </nav>
+    <footer>Solución Reto</footer>
 </body>
 
 <script src="./capacidad_endeudoamiento.js"></script>

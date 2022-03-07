@@ -49,13 +49,13 @@ function onclickcalcularEndeudamiento1() {
     const deudaUser = document.getElementById("deudaUser")
 
     NameUser.innerText = ("Name User: " + "\n" + "\n" + value);
-    salaryUser.innerText = ("Ingresos Mensual: " + "\n" + "\n" + value1);
-    deudaUser.innerText = ("Gastos Mensual: " + "\n" + "\n" + value2);
+    salaryUser.innerText = ("Ingresos Mensual : " + "\n" + "\n" + "$ " + value1);
+    deudaUser.innerText = ("Gastos Mensual $: " + "\n" + "\n" + "$ " +  value2);
 
 
 }
 function onclickcalcularEndeudamiento2() {
     
     const calcularDeuda = document.getElementById("calcularDeuda")
-    calcularDeuda.innerText = ("Capacidad de endeudamiento: " + "\n" + "\n" + resultado());
+    calcularDeuda.innerText = ("Capacidad de endeudamiento $: " + "\n" + "\n" + "$ " +  resultado());
 }

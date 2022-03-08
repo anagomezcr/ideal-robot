@@ -48,7 +48,7 @@ function onclickcalcularEndeudamiento1() {
     const salaryUser = document.getElementById("salaryUser")
     const deudaUser = document.getElementById("deudaUser")
 
-    NameUser.innerText = ("Name User: " + "\n" + "\n" + value);
+    NameUser.innerText = ("Nombre Usuario: " + "\n" + "\n" + value);
     salaryUser.innerText = ("Ingresos Mensual : " + "\n" + "\n" + "$ " + value1);
     deudaUser.innerText = ("Gastos Mensual $: " + "\n" + "\n" + "$ " +  value2);
 

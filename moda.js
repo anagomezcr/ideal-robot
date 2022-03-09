@@ -2,7 +2,7 @@ function calcularModa() {
     
     const lista1Count = {};
     
-    lista1.map(
+    listadoModa.map(
         function (elemento){
             if (lista1Count[elemento]){
                 lista1Count[elemento] += 1;
@@ -23,20 +23,28 @@ function calcularModa() {
     return moda;
     }
 // calcula la moda de cualquier lista 
-    const lista1 = [];
-    function onClickButtonList() {
-        const input = document.getElementById("InputValue")
-        const value = input.value;
-        const numero = lista1.unshift(Number(value));
+    const listadoModa = [];
+    function onClickButtonListModa() {
+        const input2 = document.getElementById("InputValue2")
+        const value2 = input2.value;
+        const numero2 = listadoModa.unshift(Number(value2));
         
         const resultC = document.getElementById("resultC")
-        resultC.innerText = "Tu lista de numeros es: " + lista1;
+        resultC.innerText = "Tu lista de numeros es: " + "\n" + listadoModa;
     }
     function onClickButtonModa() {
-        const input = document.getElementById("InputValue")
-        const value = input.value;
+        const input2 = document.getElementById("InputValue2")
+        const value2 = input2.value;
          
         const resModa = calcularModa()
-        const resultP = document.getElementById("resultP")
-        resultP.innerText = "La moda es: " + resModa;
+        const resultD = document.getElementById("resultD")
+        resultD.innerText = "La moda es: " + "\n" + resModa;
+    }
+    function onClickButtonRevModa() {
+        const input2 = document.getElementById("InputValue2")
+        const value2 = input2.value;
+        const numero2 = listadoModa.shift(Number(value2));
+        lista()
+        const resultC = document.getElementById("resultC")
+        resultC.innerText = "Tu lista de numeros es: " +  "\n" + listadoModa;  
     }

@@ -41,22 +41,29 @@ else{
     return mediana;
 }
 
-// calcular la mediana de cualquier lista 
+// calcular la mediana
 const lista1 = [];
-function onClickButtonList() {
-    const input = document.getElementById("InputValue")
-    const value = input.value;
-    const numero = lista1.unshift(Number(value));
+function onClickButtonListMediana() {
+    const input1 = document.getElementById("InputValue1")
+    const value1 = input1.value;
+    const numero1 = lista1.unshift(Number(value1));
 
     lista()
-    const resultC = document.getElementById("resultC")
-    resultC.innerText = "Tu lista de numeros es: " + lista1;
+    const resultA = document.getElementById("resultA")
+    resultA.innerText = "Tu lista de numeros es: " + "\n" + lista1;
 }
 function onClickButtonMediana() {
-    const input = document.getElementById("InputValue")
-    const value = input.value;
+    const input1 = document.getElementById("InputValue1")
+    const value1 = input1.value;
      
-    const resultP = document.getElementById("resultP")
-    resultP.innerText = "La media es: " + lista();
-
+    const resultB = document.getElementById("resultB")
+    resultB.innerText = "La media es: " + "\n" + lista();
+}
+function onClickButtonRevMediana() {
+    const input1 = document.getElementById("InputValue1")
+    const value1 = input1.value;
+    const numero1 = lista1.shift(Number(value1));
+    lista()
+    const resultA = document.getElementById("resultA")
+    resultA.innerText = "Tu lista de numeros es: " + "\n" + lista1;  
 }

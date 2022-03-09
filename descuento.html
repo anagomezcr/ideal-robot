@@ -6,22 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porcentajes y Descuentos | Curso práctico de JavaScript</title>
     <style>
-        body {
-            
+        body {           
             height: 100vh;
             background: #EEEDDE;
-            display: grid;
             justify-content: center;
-            margin: none;
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            display: inline;
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+        a {
+            display: block;
+            padding: 8px;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #111;           
+        }
+        li:last-child {
+            border-right: none;
+            float: right
+        }
+        .active {
+            background-color: #04AA6D;
         }
         h1 {
             margin: auto;
             text-align: center; 
             font-size: 40px;
+            padding: 20px;
         }
         h2 {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            text-align: center; font-size: 25px;
+            text-align: center; 
+            font-size: 25px;
+        }
+        section {
+            display: grid;
+            justify-content: center;
         }
         .contenido {
             height: 250px;
@@ -101,6 +138,9 @@
         h2 {
             font-size: 18px;
         }
+        ol {
+            padding: 5px;
+        }
         .contenido {
             height: 250px;
             width: 300px;
@@ -143,21 +183,31 @@
             text-align: center; 
             font-size: 15px;
             width: 100%;
+            height: auto;
         }
         }
     </style>
 </head>
 <body>
+     <ul>
+        <li><a href="./index.html">Menú</a></li>
+        <li><a href="#news">Noticias</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a class="active" href="#about">Acerca.. </a></li>
+    </ul> 
     <header>
+   
     <h1>Porcentajes y Descuentos</h1>
 </header>
 <section>
 <h2>Cálcula el precio a pagar de tus productos con descuentos</h2>
-    <ul>_Si el precio es mayor a $1000, tiene un cupon con un descuento adicional del 70%.</ul>
-    <ul>_Si el precio es mayor a $800, tiene un cupon con un descuento adicional del 50%.</ul>
-    <ul>_Si el precio es mayor a $500, tiene un cupon con un descuento adicional del 30%.</ul>
-    <ul>_Si el precio es mayor a $100, tiene un cupon con un descuento adicional del 20%.</ul>
-    <ul>_Si el precio es menor a $100, no aplica descuento del cupon</ul>
+<div>
+    <ol>_Si el precio es mayor a $1000, tiene un cupon con un descuento adicional del 70%.</ol>
+    <ol>_Si el precio es mayor a $800, tiene un cupon con un descuento adicional del 50%.</ol>
+    <ol>_Si el precio es mayor a $500, tiene un cupon con un descuento adicional del 30%.</ol>
+    <ol>_Si el precio es mayor a $100, tiene un cupon con un descuento adicional del 20%.</ol>
+    <ol>_Si el precio es menor a $100, no aplica descuento del cupon</ol>
+</div>
 <div class="contenido">
     <article style="background: red; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
         <img src="https://cdn-icons-png.flaticon.com/512/1235/1235577.png" alt="cupon">

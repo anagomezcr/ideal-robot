@@ -8,6 +8,7 @@ if(lista1[i] === 0){
 }
 else{
  let price = (Number (1/lista1[i]));
+     console.log(price);
 total += price;
 }}
 return lista1.length/total;}
@@ -29,13 +30,4 @@ function onClickButtonMediaArmonica() {
     
     const resultP = document.getElementById("resultP")
     resultP.innerText = "La media armonica es: " + mediaArmonica();
-}
-function onClickButtonRev() {
-    const input = document.getElementById("InputValue")
-    const value = input.value;
-    const numero = lista1.shift(Number(value));
-    mediaArmonica()
-    const resultC = document.getElementById("resultC")
-    resultC.innerText = "Tu lista de numeros es: " + lista1;
-    
 }

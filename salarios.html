@@ -5,9 +5,192 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>salarios</title>
+<style>
+    body {
+        width: 100%;
+        margin: 0;
+        background: white;
+        border-top: 1px solid white;
+    }
+    header {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        border-bottom: 1px solid white;
+
+    }
+    li {
+        display: inline;
+        float: left;
+        border-right: 1px solid rgb(65, 60, 60);
+    }
+    a {
+        display: block;
+        padding: 8px;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color: rgba(56, 53, 53, 0.185);           
+    }
+    li:last-child {
+        border-right: none;
+        float: right;
+    }
+    .active {
+        background-color: #04AA6D;
+    }
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 40px;
+    }
+    .formularios {
+        display:grid;
+        justify-content: center;
+    }
+    .formularios img:last-child {
+        margin-left: 200px;
+        margin-right: auto;
+    }
+    .contenedorsection {
+        display: flex;
+    }
+    img {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+    }
+    section {
+        text-align: center;
+        margin: auto;
+        width: 50%;
+        margin: 50px;
+    }
+    section h1 {
+        font-size: xx-large;
+    }
+    label {
+        font-family: fantasy;
+        font-size: large;
+    }
+    input {
+        background: rgb(192, 188, 188);
+        border-radius: 5px;
+        height: 50px;
+        width: 200px;
+        border-width: medium;
+        font-size: x-large;
+    }
+    button {
+        border-radius: 10px; 
+        height: 50px;
+        width: 200px;
+        background: black;
+        border-width: medium;
+        color: white;
+        font-weight: bold;
+    }
+   
+    footer {
+        height: auto;
+        background: white;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 30px;
+        height: 30px;
+        font-size: medium;
+        width: 100%;
+        bottom: 0;
+        position: fixed;
+        border-top: 3px solid #04AA6D;
+    }
+    @media (max-width: 650px) {
+    h1 {
+        font-size: larger;
+        padding-top: 20px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedorsection {
+        display: grid;
+        margin-top: 60px;
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        }
+    section {
+        width: 80%;
+        margin: 30px auto 50px auto;
+    }
+    input {
+        height: auto;
+        width: auto;
+        font-size: small;
+    }
+    .contornoButton {
+        margin-top: 10px;
+    }
+    button {
+        height: 50px;
+        width: auto;
+    }
+}
+</style>
 </head>
 <body>
-    <h1>SALARIOS</h1>
+    <header>
+        <li><a href="./index.html">Menú</a></li>
+        <li><a href="#news">Noticias</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a class="active" href="#about">Acerca.. </a></li>
+    </header> 
+    <h1 style="color: black; text-align: center; ">CALCULADORA MEDIANA SALARIOS</h1>
+    <div class="formularios">
+        <div class="contenedorsection">
+            <img src="https://cdn-icons-png.flaticon.com/512/2534/2534219.png" alt="img">
+            <section>
+                <h1>MEDIANA SALARIOS</h1>
+                <form action="" class="calculo">
+                    <label for="Pais" >Escriba el pais</label><br><br>
+                    <input id="Pais"  type="text" placeholder=" Datos" required><br><br>
+                    <label for="Name" >Escribe el nombre:  </label><br><br>
+                    <input id="Name"  type="text" placeholder=" Datos" required><br><br>
+                    <label for="Salary" >Escribe el salario:  </label><br><br>
+                    <input id="Salary"  type="number" placeholder=" Datos" required><br><br>
+
+                <div>
+                    <button type="button" onclick="onClickButtonListMedianaSalary()">Añadir número</button><br><br>
+                    <button type="button" onclick="onClickButtonMedianaSalary()">Calcular media ponderada</button><br><br>
+                    <button type="button" onclick="onClickButtonRevMedianaSalary()">Eliminar datos</button>
+                    <h5 id="nameElement"></h5>
+                    <h5 id="valueElement"></h5>
+                    <h5 id="pesoElement"></h5>
+                    <h5 id="calcularMedianaSalarios" style="font-size: x-large;"></h5>
+                    </div>
+            </section>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/5625/5625755.png" alt="img">
+            <section>
+                <h1>MEDIANA TOP 10% </h1>
+                    <h5 id="calcularSalarios10" style="font-size: x-large;"></h5>
+                    <h5 id="calcularMedianaSalarios10" style="font-size: x-large;"></h5>
+                    </div>
+            </section>
+        </div>
+    </div>
 </body>
 <script src="./salarios.js"></script>
 <script src="./analisis.js"></script>

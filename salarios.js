@@ -1,82 +1,82 @@
-const colombia = [];
+const OtroPais = [];
 
-colombia.push({
+OtroPais.push({
     name: "diego",
     salary: 100000,
 });
-colombia.push({
+OtroPais.push({
     name: "elizabeth",
     salary: 200000,
 });
-colombia.push({
+OtroPais.push({
     name: "saniago",
     salary: 30000,
 });
-colombia.push({
+OtroPais.push({
     name: "miguel",
     salary: 8000,
 });
-colombia.push({
+OtroPais.push({
     name: "oscar",
     salary: 100500,
 });
-colombia.push({
+OtroPais.push({
     name: "lucia",
     salary: 700,
 });
-colombia.push({
+OtroPais.push({
     name: "peter",
     salary: 600,
 });
-colombia.push({
+OtroPais.push({
     name: "javier",
     salary: 9900,
 });
-colombia.push({
+OtroPais.push({
     name: "pablo",
     salary: 133000,
 });
-colombia.push({
+OtroPais.push({
     name: "francisco",
     salary: 1667,
 });
-colombia.push({
+OtroPais.push({
     name: "pedro",
     salary: 15534,
 });
-colombia.push({
+OtroPais.push({
     name: "sara",
     salary: 59680,
 });
-colombia.push({
+OtroPais.push({
     name: "leidy",
     salary: 900800,
 });
-colombia.push({
+OtroPais.push({
     name: "juan",
     salary: 1234800,
 });
-colombia.push({
+OtroPais.push({
     name: "fernando",
     salary: 3456,
 });
-colombia.push({
+OtroPais.push({
     name: "ana",
     salary: 124000,
 });
-colombia.push({
+OtroPais.push({
     name: "cristian",
     salary: 40033,
 });
-colombia.push({
+OtroPais.push({
     name: "mary",
     salary: 600,
 });
-colombia.push({
+OtroPais.push({
     name: "marco",
     salary: 14339,
 });
-colombia.push({
+OtroPais.push({
     name: "felipe",
     salary: 90080,
 });

@@ -1,33 +1,43 @@
-
 function mediaArmonica(){
     let total = 0;
-for(var i = 0; i < lista1.length; i++) {
-if(lista1[i] === 0){
+for(var i = 0; i < numbersUser.length; i++) {
+if(numbersUser[i] === 0){
     alert ("El número no puede ser 0");
-    let cero = lista1.shift();
+    let cero = numbersUser.shift();
 }
 else{
- let price = (Number (1/lista1[i]));
-     console.log(price);
+ let price = (Number (1/numbersUser[i]));
 total += price;
 }}
-return lista1.length/total;}
+return numbersUser.length/total;}
 
 // calcular la mediana de cualquier lista 
-const lista1 = [];
-function onClickButtonList() {
+const numbersUser = [];
+
+function onClickButtonListMediaArmonica() {
     const input = document.getElementById("InputValue")
     const value = input.value;
-    const numero = lista1.unshift(Number(value));
+    const numero = numbersUser.unshift(Number(value));
+
     mediaArmonica()
-    const resultC = document.getElementById("resultC")
-    resultC.innerText = "Tu lista de numeros es: " + lista1;
-    
+    const resultA = document.getElementById("resultA")
+    resultA.innerText = "Tu lista de numeros es: " + numbersUser;
 }
+
 function onClickButtonMediaArmonica() {
     const input = document.getElementById("InputValue")
     const value = input.value;
     
-    const resultP = document.getElementById("resultP")
-    resultP.innerText = "La media armonica es: " + mediaArmonica();
+    const resultB = document.getElementById("resultB")
+    resultB.innerText = "La media armonica es: " + mediaArmonica();
+}
+
+function onClickButtonRevMediaArmonica() {
+    const input = document.getElementById("InputValue")
+    const value = input.value;
+    const numero = numbersUser.shift(Number(value));
+
+    mediaArmonica()
+    const resultA = document.getElementById("resultA")
+    resultA.innerText = "Tu lista de numeros es: " + numbersUser;
 }

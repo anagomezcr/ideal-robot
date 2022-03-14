@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Armonica</title>
+    <style>
+    body {
+        width: 100%;
+        margin: 0;
+        background: brown;
+        border-top: 1px solid white;
+    }
+    header {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        border-bottom: 1px solid white;
+
+    }
+    li {
+        display: inline;
+        float: left;
+        border-right: 1px solid #bbb;
+    }
+    a {
+        display: block;
+        padding: 8px;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color: rgba(56, 53, 53, 0.185);           
+    }
+    li:last-child {
+        border-right: none;
+        float: right;
+    }
+    .active {
+        background-color: #04AA6D;
+    }
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 40px;
+    }
+    .formularios {
+        justify-content: center;
+    }
+    .contenedorsection {
+        display: flex;
+    }
+    img {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+    }
+    section {
+        text-align: center;
+        border: solid black 5px;
+        border-radius: 30px;
+        background: white;
+        margin: auto;
+        width: 50%;
+        margin-top: 60px;
+    }
+    
+    section h1 {
+        font-size: xx-large;
+    }
+    label {
+        font-family: fantasy;
+        font-size: large;
+    }
+    input {
+        background: rgb(192, 188, 188);
+        border-radius: 5px;
+        height: 50px;
+        width: 200px;
+        border-width: medium;
+        font-size: x-large;
+    }
+    button {
+        border-radius: 10px; 
+        height: 50px;
+        width: 200px;
+        background: black;
+        border-width: medium;
+        color: white;
+        font-weight: bold;
+    }
+   
+    footer {
+        height: auto;
+        background: white;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 30px;
+        height: 30px;
+        font-size: medium;
+        width: 100%;
+        bottom: 0;
+        position: fixed;
+        border-top: 3px solid #04AA6D;
+    }
+    @media (max-width: 650px) {
+    h1 {
+        font-size: larger;
+        padding-top: 20px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedorsection {
+        display: grid;
+        margin-top: 60px;
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        }
+    section {
+        width: 80%;
+        margin: 30px auto 50px auto;
+    }
+    input {
+        height: auto;
+        width: auto;
+        font-size: small;
+    }
+    .contornoButton {
+        margin-top: 10px;
+    }
+    button {
+        height: 50px;
+        width: auto;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <li><a href="./index.html">Menú</a></li>
+        <li><a href="#news">Noticias</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><a class="active" href="#about">Acerca.. </a></li>
+    </header> 
+    <h1 style="color: white; text-align: center; ">CALCULADORA MEDIA ARMONICA | MEDIA ARITMETICA | MEDIA PONDERADA</h1>
+    <div class="formularios">
+        <div class="contenedorsection">
+            <img src="https://cdn-icons-png.flaticon.com/512/6813/6813617.png" alt="img">
+            <section>
+                <h1>MEDIA ARMONICA</h1>
+                <form action="" class="calculo">
+                    <label for="InputValue" >Escribe los números:  </label><br><br>
+                    <input id="InputValue"  type="number" placeholder=" Datos" required><br><br>
+                <div>
+                    <button type="button" onclick="onClickButtonListMediaArmonica()">Añadir número</button><br><br>
+                    <button type="button" onclick="onClickButtonMediaArmonica()">Calcular media armonica</button><br><br>
+                    <button type="button" onclick="onClickButtonRevMediaArmonica()">Eliminar número</button>
+                    <p id="resultA" style="font-size: x-large;"></p>
+                    <p id="resultB" style="font-size: x-large;"></p>
+                </div>
+            </section>
+        </div>
+
+        <div class="contenedorsection">
+            <img src="https://cdn-icons-png.flaticon.com/512/2327/2327544.png" alt="img">
+            <section>
+                <h1>MEDIA ARITMETICA</h1>
+                <form action="" class="calculo">
+                    <label for="InputValue1" >Escribe los números:  </label><br><br>
+                    <input id="InputValue1"  type="number" placeholder=" Datos" required><br><br>
+                <div>
+                    <button type="button" onclick="onClickButtonListMediaAritmetica()">Añadir número</button><br><br>
+                    <button type="button" onclick="onClickButtonMediaAritmetica()">Calcular media aritmetica</button><br><br>
+                    <button type="reset" onclick="onClickButtonRevMediaAritmetica()">Eliminar número</button>
+                    <p id="resultC" style="font-size: x-large;"></p>
+                    <p id="resultD" style="font-size: x-large;"></p>
+                </div>
+            </section>
+        </div>
+
+        <div class="contenedorsection" style="margin-bottom: 60px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/972/972264.png" alt="img">
+            <section>
+                <h1>MEDIA PONDERADA</h1>
+                <form action="" class="calculo">
+                    <label for="Name" >Escriba el nombre del elemento </label><br><br>
+                    <input id="Name"  type="text" placeholder=" Datos" required><br><br>
+                    <label for="Number1" >Escribe el valor:  </label><br><br>
+                    <input id="Number1"  type="number" placeholder=" Datos" required><br><br>
+                    <label for="Number2" >Escribe el peso:  </label><br><br>
+                    <input id="Number2"  type="number" placeholder=" Datos" required><br><br>
+
+                <div>
+                    <button type="button" onclick="onClickButtonListMediaPonderada()">Añadir número</button><br><br>
+                    <button type="button" onclick="onClickButtonMediaPonderada()">Calcular media ponderada</button><br><br>
+                    <button type="reset" onclick="onClickButtonRevMediaPonderada()">Eliminar datos</button>
+                    <h5 id="nameElement"></h5>
+                    <h5 id="valueElement"></h5>
+                    <h5 id="pesoElement"></h5>
+                    <h5 id="calcularMediaPonderada" style="font-size: x-large;"></h5>
+                    </div>
+            </section>
+        </div>
+    </div>
+    <footer>Quinto Reto Completado</footer>
+</body>
+    <script src="./media_armonica.js"></script>
+    <script src="./media_aritmetica.js"></script>
+    <script src="./media_poderada.js"></script>
+
+
+</body>
+</html>

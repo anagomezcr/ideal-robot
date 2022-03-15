@@ -5,38 +5,170 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Curso Práctico JavaScript</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            justify-content: center;
+            margin: 0;
+            background: #E9C891;
+        }
+        header {
+            text-align: center;
+            margin: auto;
+            font-size: x-large;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        section {
+            display: flex;
+
+        }
+        div {
+            margin: 20px;
+        }
+        ol {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 60px;
+        }
+        li {
+            color: #fff;
+            background-color: #04AA6D;
+            border-radius: 15px;
+            border: 3px solid black;
+            height: 300px;
+            width: auto;
+            margin-top: 20px;
+            box-shadow: 10px 9px #999 ;
+        }
+        li:hover {
+            background-color: #3e8e41
+        }
+        li:active {
+            background-color: #3e8e41;
+            transform: translateY(4px);
+        }
+        a {
+            text-decoration: none;
+            text-align: center;
+            font-size: medium;
+            color: black;
+            font-weight: bold;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        img {
+            height: 200px;
+            width: 200px;
+        }
+
+        footer {
+            height: 40px;
+            background: #E9C891;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+            font-size: medium;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+            border-top: 3px solid #04AA6D;
+        }
+        @media (max-width: 650px) {
+            header {
+                font-size: medium;
+                margin: 15px;
+            }
+            section {
+                display: grid;
+            }
+            ol {
+                margin-bottom: 0;
+            }
+            div {
+                margin: 0 20px 0 20px;
+            }
+            section div:last-child {
+                margin-bottom: 60px; 
+            }
+            
+        }
+    </style>
+
+ 
 </head>
 <body>
     <header>
         <h1>
             Talleres del curso práctico de JavaScript
         </h1>
-        <p>Estos retos fueron desarrollados por Ana Gómez</p>
     </header>
 
     <section>
-        <nav>
+        <div>
             <ol>
                 <li>
-                    <a href="./figuras.html">Calculadora Medidas en Figuras Geometrica</a>
+                    <a href="./figuras.html">
+                        <p>Calculadora Medidas en Figuras Geometrica</p> 
+                        <div>
+                          <img src="https://cdn-icons-png.flaticon.com/512/1036/1036308.png"> 
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <a href="./descuento.html">Calculadora Descuento</a>
-                </li>
+                    <a href="./descuento.html">
+                        <p>Calculadora descuento</p> 
+                        <div>
+                          <img src="https://cdn-icons-png.flaticon.com/512/6043/6043375.png"> 
+                        </div>
+                    </a>
+                </li> 
+            </ol>
+        </div>
+           
+        <div>
+            <ol>
                 <li>
-                    <a href="./mediana_moda.html">Calculadora Mediana | Moda</a>
+                    <a href="./mediana_moda.html">
+                        <p>Calculadora Mediana | Moda</p> 
+                        <div>
+                           <img src="https://cdn-icons.flaticon.com/png/512/5143/premium/5143854.png?token=exp=1647348435~hmac=509b0ec0de48c924777bb729353aeb1c"> 
+                        </div>
+                    </a>
                 </li>          
                 <li>
-                    <a href="./salarios.html">Salarios</a>
+                    <a href="./salarios.html">
+                        <p>Calculadora mediana de Salarios</p> 
+                        <div>
+                             <img src="https://cdn-icons-png.flaticon.com/512/3310/3310624.png"> 
+                        </div>
+                    </a>
+                </li>  
+            </ol>  
+        </div>
+
+        <div>
+            <ol>
+                 <li>
+                    <a href="./media_armonica_aritmetica_ponderada.html">
+                        <p>Calculadora Media armonica | aritmetica | ponderada</p> 
+                        <div>
+                          <img src="https://cdn-icons-png.flaticon.com/512/2452/2452668.png"> 
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <a href="./media_armonica_aritmetica_ponderada.html">Calculadora Media armonica | aritmetica | ponderada</a>
-                </li>
-                <li>
-                    <a href="./capacidad_endeudamiento.html">Calculadora Capadidad Endeudamiento</a>
+                    <a href="./capacidad_endeudamiento.html">
+                        <p>Calculadora Capadidad Endeudamiento</p> 
+                        <div>
+                           <img src="https://cdn-icons-png.flaticon.com/512/888/888371.png"> 
+                        </div>
+                    </a>
                 </li>
             </ol>
-        </nav>       
+        </div>
     </section>
+    <footer><p>Estos retos fueron desarrollados por Ana Gómez</p></footer>
 </body>
 </html>

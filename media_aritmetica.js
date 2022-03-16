@@ -22,7 +22,7 @@ function onClickButtonListMediaAritmetica() {
 
     mediaAritmetica()
     const resultC = document.getElementById("resultC")
-    resultC.innerText = "Tu valores de numeros es: " + valores;
+    resultC.innerText = "Tu valores de numeros es: " + valores.join(", ");
 }
 
 function onClickButtonMediaAritmetica() {
@@ -30,7 +30,7 @@ function onClickButtonMediaAritmetica() {
     const value1 = input1.value;
     
     const resultD = document.getElementById("resultD")
-    resultD.innerText = "La media armonica es: " + mediaAritmetica();
+    resultD.innerText = "La media armonica es: " + "\n" + mediaAritmetica();
 }
 
 function onClickButtonRevMediaAritmetica() {

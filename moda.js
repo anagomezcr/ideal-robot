@@ -30,7 +30,7 @@ function calcularModa() {
         const numero2 = listadoModa.unshift(Number(value2));
         
         const resultC = document.getElementById("resultC")
-        resultC.innerText = "Tu lista de numeros es: " + "\n" + listadoModa;
+        resultC.innerText = "Tu lista de numeros es: " + "\n" + listadoModa.join(", ");
     }
     function onClickButtonModa() {
         const input2 = document.getElementById("InputValue2")
@@ -38,7 +38,7 @@ function calcularModa() {
          
         const resModa = calcularModa()
         const resultD = document.getElementById("resultD")
-        resultD.innerText = "La moda es: " + "\n" + resModa;
+        resultD.innerText = "La moda es: " + "\n" + resModa.join(" \n y se repite ") + " veces.";
     }
     function onClickButtonRevModa() {
         const input2 = document.getElementById("InputValue2")

@@ -50,7 +50,7 @@ function onClickButtonListMediana() {
 
     lista()
     const resultA = document.getElementById("resultA")
-    resultA.innerText = "Tu lista de numeros es: " + "\n" + lista1;
+    resultA.innerText = "Tu lista de numeros es: " + "\n" + lista1.join(", ");
 }
 function onClickButtonMediana() {
     const input1 = document.getElementById("InputValue1")

@@ -100,6 +100,11 @@
             color: white;
             font-weight: bold;
         }
+        .results {
+            display: flex;
+            justify-content: space-around;
+            font-size: x-large;
+        }
         footer {
             height: auto;
             background: white;
@@ -203,6 +208,9 @@
                 height: 50px;
                 width: auto;
             }
+            .results {
+                font-size: medium;
+            }
         }
     </style>
 </head>
@@ -278,9 +286,11 @@
                         <button type="button" onclick="onClickButtonListMediaPonderada()">Añadir número</button><br><br>
                         <button type="button" onclick="onClickButtonMediaPonderada()">Calcular media ponderada</button><br><br>
                         <button type="reset" onclick="onClickButtonRevMediaPonderada()">Eliminar datos</button>
-                        <h5 id="nameElement"></h5>
-                        <h5 id="valueElement"></h5>
-                        <h5 id="pesoElement"></h5>
+                        <div class="results">
+                            <h5 id="nameElement"></h5>
+                            <h5 id="valueElement"></h5>
+                            <h5 id="pesoElement"></h5>
+                        </div>
                         <h5 id="calcularMediaPonderada" style="font-size: x-large;"></h5>
                     </div>
                 </form>

@@ -21,7 +21,7 @@ function onClickButtonListMediaArmonica() {
 
     mediaArmonica()
     const resultA = document.getElementById("resultA")
-    resultA.innerText = "Tu lista de numeros es: " + numbersUser;
+    resultA.innerText = "Tu lista de numeros es: " + numbersUser.join(", ");
 }
 
 function onClickButtonMediaArmonica() {
@@ -29,7 +29,7 @@ function onClickButtonMediaArmonica() {
     const value = input.value;
     
     const resultB = document.getElementById("resultB")
-    resultB.innerText = "La media armonica es: " + mediaArmonica();
+    resultB.innerText = "La media armonica es: " + "\n" + mediaArmonica();
 }
 
 function onClickButtonRevMediaArmonica() {

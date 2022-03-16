@@ -72,7 +72,7 @@ function onClickButtonListMediaPonderada() {
 //calcula la media ponderada
 function onClickButtonMediaPonderada() {
     const calcularMediaPonderada = document.getElementById("calcularMediaPonderada")
-    calcularMediaPonderada.innerText = ("Media ponderada: " + "\n" + "\n" + "$ " +  mediaPonderada());
+    calcularMediaPonderada.innerText = ("Media ponderada: " + "\n" + "\n" +  mediaPonderada());
 }
 //borra cada elemento ingresado del ultimo al primero
 function onClickButtonRevMediaPonderada(){

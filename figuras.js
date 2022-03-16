@@ -99,7 +99,7 @@ function calcularAreaTriangulo(){
     const value4 = input4.value;
 
     const area = areaTriangulo(Number (value3), Number (value4));
-    document.getElementById("resAreaTriangulo").innerHTML = "El Area es : " +  areaTriangulo(Number (value3), Number (value4));
+    document.getElementById("resAreaTriangulo").innerHTML = "El Area es : " + areaTriangulo(Number (value3), Number (value4));
 }
 
 // circulo
@@ -117,7 +117,7 @@ function calcularAreaCirculo(){
     const value = input.value;
 
     const area = areaCirculo(value);
-    document.getElementById("resAreaCirculo").innerHTML = "El Area es : " +  areaCirculo(value);
+    document.getElementById("resAreaCirculo").innerHTML = "El Area es : " + areaCirculo(value);
 }
 // triangulo isóceles
 function calcularPerimetroTrianguloIsoceles(){
@@ -129,7 +129,7 @@ function calcularPerimetroTrianguloIsoceles(){
     const value3 = input3.value;
 
     const perimetro = perimetroTrianguloIsoceles(Number (value), Number (value2), Number (value3));
-    document.getElementById("resPerimetroTrianguloIsoceles").innerHTML = "El perimetro es : " +  perimetroTrianguloIsoceles(Number (value), Number (value2), Number (value3));
+    document.getElementById("resPerimetroTrianguloIsoceles").innerHTML = "El perimetro es : " + "\n" + "\n" + perimetroTrianguloIsoceles(Number (value), Number (value2), Number (value3));
 
     
 }
@@ -142,7 +142,7 @@ function calcularAreaTrianguloIsoceles(){
 
     const value5 = alturaTrianguloIsoceles(value, value3);
     const area = areaTrianguloIsoceles(Number (value3), Number (value5));
-    document.getElementById("resAreaTrianguloIsoceles").innerHTML = "El Area es : " +   areaTrianguloIsoceles(Number (value3), Number (value5));
+    document.getElementById("resAreaTrianguloIsoceles").innerHTML = "El Area es : " + "\n" + areaTrianguloIsoceles(Number (value3), Number (value5));
 }
 
 

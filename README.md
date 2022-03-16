@@ -4,7 +4,7 @@
 
 - Primer paso: definir las fórmulas.
 - Segundo paso: implementar las fórmulas en JavaScript.
-- Tercer pasO: crear funciones.
+- Tercer paso: crear funciones.
 - Cuarto paso: integrar JavaScrip con HTML.
 
 ## Taller #2 Porcentajes y Descuentos
@@ -34,9 +34,9 @@
 `<link>` : <https://anagomezcr.github.io/ideal-robot/>
 
 
-####Javascript
-####HTML
-####CSS
+#### Javascript
+#### HTML
+#### CSS
 
 
 > Follow me.

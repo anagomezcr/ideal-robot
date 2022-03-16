@@ -161,10 +161,7 @@
                 font-weight: bold;
             }
         }
-        @media (max-width: 650px) {
-            body {
-                background: #E8E8CC;
-            }
+        @media (max-width: 1024px) {
             .navbar {
                 background-color: #333;
                 font-family: Arial;
@@ -189,8 +186,8 @@
                 color: white;
                 padding: 14px 16px;
                 background-color: inherit;
-                font-family: inherit; /* Important for vertical align on mobile phones */
-                margin: 0; /* Important for vertical align on mobile phones */
+                font-family: inherit;
+                margin: 0;
             }
             .navbar a:hover, .dropdown:hover .dropbtn {
                 background-color: red;
@@ -218,6 +215,11 @@
             .dropdown:hover .dropdown-content {
                 margin-top:50px;
                 display: grid;
+            }
+        }
+        @media (max-width: 650px) {
+            body {
+                background: #E8E8CC;
             }
             section {
                 display: grid;
@@ -256,7 +258,7 @@
                     <li><a href="./descuento.html">Calcular Descuento</a></li>
                     <li><a href="./media_armonica_aritmetica_ponderada.html">Calcular Medias Aritmeticas</a></li>
                     <li><a href="./mediana_moda.html">Calcular Descuento</a></li>
-                    <li><a class="active" href="#about">Acerca.. </a></li>
+                    <li><a class="active" href="./index.html">Gracias.. </a></li>
                 </div>
             </div>
         </ul>  
@@ -269,7 +271,7 @@
                     <form action="">
                         <div class="cuadrado">
                             <h3 for="InputCuadrado">CUADRADO</h3>
-                            <div><img src="https://cdn-icons-png.flaticon.com/512/136/136830.png" alt="cuadrado" img ></div>
+                            <div><img src="https://cdn-icons-png.flaticon.com/512/839/839146.png" alt="cuadrado" img ></div>
                         </div >
                         <p>Cuanto mide uno de sus lados</p>
                         <input id="InputCuadrado" type="number"  placeholder="Valor Lados" required><br><br>
@@ -288,7 +290,7 @@
                     <form action="">
                         <div class="triangulo">
                             <h3 for="InputTriangulo">TRIANGULO</h3> 
-                            <div><img src="https://cdn-icons-png.flaticon.com/512/122/122291.png" alt="cuadrado" img ></div>
+                            <div><img src="https://cdn-icons-png.flaticon.com/512/3791/3791118.png" alt="cuadrado" img ></div>
                         </div>
                         <div class="triangulolados">
                             <p>Escribe cuanto mide lado 1</p>
@@ -316,7 +318,7 @@
                     <form action="">
                         <div class="circulo">
                             <h3 for="InputCirculo">CIRCULO</h3>
-                            <div><img src="https://cdn-icons-png.flaticon.com/512/32/32341.png" alt="cuadrado" img ></div>
+                            <div><img src="https://cdn-icons-png.flaticon.com/512/5090/5090071.png" alt="cuadrado" img ></div>
                         </div>
                         <p>Cuanto mide el radio</p>
                         <input id="InputCirculo" type="number" placeholder="Valor radio" required><br><br>
@@ -335,7 +337,7 @@
                     <form action="">
                         <div class="trianguloIsosceles" >
                             <h3 for="InputTriangulo">TRIANGULO ISÓSCELES</h3> 
-                            <div><img src="https://cdn-icons-png.flaticon.com/512/13/13384.png" alt="cuadrado" img ></div>
+                            <div><img src="https://cdn-icons-png.flaticon.com/512/6044/6044871.png" alt="cuadrado" img ></div>
                         </div>
                         <div class="triangulolados">
                             <p>Escribe cuanto mide lado 1</p>

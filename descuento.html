@@ -11,6 +11,7 @@
             background: #EEEDDE;
             justify-content: center;
             margin: 0;
+            text-align: center;
         }
         ul {
             list-style-type: none;
@@ -40,10 +41,16 @@
         }
         li:last-child {
             border-right: none;
-            float: right
+            float: right;
         }
         .active {
             background-color: #04AA6D;
+        }
+        .dropbtn {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            background-color: #333;
         }
         h1 {
             margin: auto;
@@ -66,15 +73,17 @@
             background: white;
             display: flex;
             margin: auto;
-            border-radius: 1px;
+            border-radius: 10px;
         }
         img {
             height: 150px;
             width: 200px;
             margin-top: 40px;
         }
-        form {
-            border-left: red solid;
+        .cuestion {
+            text-align: left;
+            margin: 20px;
+            border-left: solid red;
         }
         label{
             font-size: 20px;
@@ -95,7 +104,8 @@
         .calculo {
             align-content: space-between;
             text-align: center;
-            margin: 30px auto;
+            width: 400px;
+            border-top-right-radius: 60px;
         }
         button {
             background: red;
@@ -118,121 +128,175 @@
             text-align: center;
             font-size: 25px;
         }
-        nav {
-            font-weight: bold;
-            text-align: center; 
-            font-size: 15px;
-            width: 100%;
+        footer{
+            background: #D3ECA7;
             height: 30px;
-            background: yellow;
-            margin: 0;
-            padding: 0;
+            font-size: medium;
+            font-weight: bold;
+            width: 100%;
+            bottom: 0;
+            border-top: 3px solid black;
+            position: fixed;
+        }
+        @media (max-width: 1024px) {
+            .navbar {
+                background-color: #333;
+                font-family: Arial;
+            }
+            .navbar a {
+                display: block;
+                transition: all 0.3s ease;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: red;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: black;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                float: none;
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                font-weight: bold;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: #333;
+            }
+            .dropdown:hover .dropdown-content {
+                margin-top:50px;
+                display: grid;
+            }
         }
         @media (max-width: 650px) {
-        body {
-            margin: 0;
+            body {
+                margin: 0;
+                }
+            header h1 {
+                font-size: 25px;
             }
-        header h1 {
-            font-size: 25px;
-        }
-        h2 {
-            font-size: 18px;
-        }
-        ol {
-            padding: 5px;
-        }
-        .contenido {
-            height: 250px;
-            width: 300px;
-            background: white;
-            display: flex;
-            margin: auto;
-            border-radius: 10px;
-        }
-        img {
-            height:100px;
-            width: 100px;
-            margin-top: 70px;
-        }
-        label{
-            font-size: 15px;
-            margin: 5px;
-            margin-top: 10px;
-        }
-        form input {
-            font-size: 15px;
-            width: 150px;
-            padding:3px 5px;
-        }
-        button {
-            height: 110px;
-            width: 300px;
-            margin: 20px auto;
-            font-size: 18px;
-        }
-        #resultC {
-            height: 15px;
-            font-size: 15px;
-        }
-        #resultP {
-            height: 15px;
-            font-size: 15px;
-        }
-        nav {font-family: cursive;
-            font-weight: bold;
-            text-align: center; 
-            font-size: 15px;
-            width: 100%;
-            height: auto;
-        }
+            h2 {
+                font-size: 18px;
+            }
+            ol {
+                padding: 5px;
+            }
+            .contenido {
+                height: 250px;
+                width: 300px;
+                background: white;
+                display: flex;
+                margin: auto;
+                border-radius: 10px;
+            }
+            img {
+                height:100px;
+                width: 100px;
+                margin-top: 70px;
+            }
+            label{
+                font-size: 15px;
+                margin: 5px;
+                margin-top: 10px;
+            }
+            form input {
+                font-size: 15px;
+                width: 150px;
+                padding:3px 5px;
+            }
+            button {
+                height: 110px;
+                width: 300px;
+                margin: 20px auto;
+                font-size: 18px;
+            }
+            #resultC {
+                height: 15px;
+                font-size: 15px;
+            }
+            #resultP {
+                height: 15px;
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 <body>
-     <ul>
-        <li><a href="./index.html">Menú</a></li>
-        <li><a href="#news">Noticias</a></li>
-        <li><a href="#contact">Contacto</a></li>
-        <li><a class="active" href="#about">Acerca.. </a></li>
-    </ul> 
     <header>
-   
+        <ul>
+            <div class="dropdown">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <li> <div class="dropbtn">
+                    <i class="fa fa-home"></i></div></li>
+                <div class="dropdown-content">
+                    <li><a href="./index.html">Menú</a></li>
+                    <li><a href="./figuras.html">Calcular Medidas en Figuras Geometricas</a></li>
+                    <li><a href="./salarios.html">Calcular Mediana Salarios</a></li>
+                    <li><a href="./media_armonica_aritmetica_ponderada.html">Calcular Media</a></li>
+                    <li><a href="./mediana_moda.html">Calcular Mediana | Moda</a></li>
+                    <li><a class="active" href="./index.html">Gracias.. </a></li>
+                </div>
+            </div>
+        </ul>  
+    </header> 
     <h1>Porcentajes y Descuentos</h1>
-</header>
-<section>
-<h2>Cálcula el precio a pagar de tus productos con descuentos</h2>
-<div>
-    <ol>_Si el precio es mayor a $1000, tiene un cupon con un descuento adicional del 70%.</ol>
-    <ol>_Si el precio es mayor a $800, tiene un cupon con un descuento adicional del 50%.</ol>
-    <ol>_Si el precio es mayor a $500, tiene un cupon con un descuento adicional del 30%.</ol>
-    <ol>_Si el precio es mayor a $100, tiene un cupon con un descuento adicional del 20%.</ol>
-    <ol>_Si el precio es menor a $100, no aplica descuento del cupon</ol>
-</div>
-<div class="contenido">
-    <article style="background: red; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/1235/1235577.png" alt="cupon">
-    </article>
-<form action="" class="calculo">
-    <p>
-    <label for="InputPrice" >Escribe el precio:  </label>
-    <br><br>
-    <input id="InputPrice"  type="number" placeholder=" Precio" required>
-    <p> 
-    <label for="InputDiscount">Escribe el descuento:  </label>
-    <br><br>
-    <input id="InputDiscount" type="number" placeholder=" Descuento" required >
-</div>
-<div style="display: flex; flex-direction: row;">
-<button type="button" onclick="onClickButtonPriceDiscount()">Calcular el precio con el descuento</button>
-</div>
-<p id="resultC"></p>
-<p id="resultP"></p>
-<p>El primer valor corresponde al descuento que usted le desee aplicar, el segundo toma las condiciones anteriormente nombradas.</p>
-</div>
-</form>
-</section>
-<nav >Este es el segundo taller del Curso Prácico de JavaScript.</nav>
-
-    <script src="./descuentos.js"></script>
+    </header>
+    <section>
+        <h2>Cálcula el precio a pagar de tus productos con descuentos</h2>
+        <div style="text-align: left; margin-bottom: 40px;">
+            <p>
+                <ol>_Si el precio es mayor a $1000, tiene un cupon con un descuento adicional del 70%.</ol>
+                <ol>_Si el precio es mayor a $800, tiene un cupon con un descuento adicional del 50%.</ol>
+                <ol>_Si el precio es mayor a $500, tiene un cupon con un descuento adicional del 30%.</ol>
+                <ol>_Si el precio es mayor a $100, tiene un cupon con un descuento adicional del 20%.</ol>
+                <ol>_Si el precio es menor a $100, no aplica descuento del cupon</ol>
+            </p>
+        </div>
+        <div class="contenido">
+            <article style="background: red; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/1235/1235577.png" alt="cupon">
+            </article>
+            <form action="" class="calculo">
+                <div class="cuestion">
+                    <label for="InputPrice" >Escribe el precio:  </label><br><br>
+                    <input id="InputPrice"  type="number" placeholder=" Precio" required><br><br>
+                    <label for="InputDiscount">Escribe el descuento:  </label><br><br>
+                    <input id="InputDiscount" type="number" placeholder=" Descuento" required ><br><br>
+                </div>
+            </form>
+        </div>
+        <button type="button" onclick="onClickButtonPriceDiscount()">Calcular el precio con el descuento</button>
+        <p id="resultC"></p>
+        <p id="resultP"></p>
+        <p style="padding-bottom: 60px;">El primer valor corresponde al descuento que usted le desee aplicar, el segundo toma las condiciones anteriormente nombradas.</p>
+    </section>
+    <footer >Este es el segundo taller del Curso Prácico de JavaScript.</footer>
 </body>
+<script src="./descuentos.js"></script>
 </html>

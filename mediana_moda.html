@@ -12,14 +12,12 @@
             background: black;
             border-top: 1px solid white;
         }
-        header {
+        ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
             background-color: #333;
-            border-bottom: 1px solid white;
-
         }
         li {
             display: inline;
@@ -38,7 +36,7 @@
             text-decoration: none;
         }
         li a:hover {
-            background-color: rgba(56, 53, 53, 0.185);           
+            background-color: #111;           
         }
         li:last-child {
             border-right: none;
@@ -47,6 +45,12 @@
         .active {
             background-color: #04AA6D;
         }
+        .dropbtn {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            background-color: #333;
+        }  
         .container {
             display: flex;
             justify-content: space-evenly;
@@ -106,52 +110,117 @@
             position: fixed;
             border-top: 3px solid #04AA6D;
         }
-
+        @media (max-width: 1024px) {
+            .navbar {
+                background-color: #333;
+                font-family: Arial;
+            }
+            .navbar a {
+                display: block;
+                transition: all 0.3s ease;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: red;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: black;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                float: none;
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                font-weight: bold;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: #333;
+            }
+            .dropdown:hover .dropdown-content {
+                margin-top:50px;
+                display: grid;
+            }
+        }
         @media (max-width: 650px) {
-        h1 {
-            font-size: larger;
-            padding-top: 20px;
+            h1 {
+                font-size: larger;
+                padding-top: 20px;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+            section {
+                width: 80%;
+                margin: 30px auto 50px auto;
+            }
+            input {
+                height: auto;
+                width: auto;
+                font-size: small;
+            }
+            .contornoButton {
+                margin-top: 10px;
+            }
+            button {
+                height: 50px;
+                width: auto;
+            }
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-        }
-        section {
-            width: 80%;
-            margin: 30px auto 50px auto;
-        }
-        input {
-            height: auto;
-            width: auto;
-            font-size: small;
-        }
-        .contornoButton {
-            margin-top: 10px;
-        }
-        button {
-            height: 50px;
-            width: auto;
-        }
-    }
     </style>
 </head>
 <body>
     <header>
-        <li><a href="./index.html">Menú</a></li>
-        <li><a href="#news">Noticias</a></li>
-        <li><a href="#contact">Contacto</a></li>
-        <li><a class="active" href="#about">Acerca.. </a></li>
-    </header> 
+        <ul>
+            <div class="dropdown">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <li> <div class="dropbtn">
+                    <i class="fa fa-home"></i></div></li>
+                <div class="dropdown-content">
+                    <li><a href="./index.html">Menú</a></li>
+                    <li><a href="./figuras.html">Calcular Medidas en Figuras Geometricas</a></li>
+                    <li><a href="./descuento.html">Calcular Descuento</a></li>
+                    <li><a href="./media_armonica_aritmetica_ponderada.html">Calcular Media</a></li>
+                    <li><a href="./capacidad_endeudamiento.html">Calcular Capacidad Endeudamiento</a></li>
+                    <li><a href="./salarios.html">Calcular Mediana Salarios</a></li>
+                    <li><a class="active" href="./index.html">Gracias.. </a></li>
+                </div>
+            </div>
+        </ul>  
+    </header>
     <h1 style="color: white; text-align: center; ">CALCULADORA MEDIANA | MODA</h1>
     <div class="container">
         <section>
             <img src="https://cdn-icons-png.flaticon.com/512/6875/6875429.png" alt="mediana">
             <h1>MEDIANA</h1>
-
             <form action="" class="calculoMediana">
                 <label for="InputValue1" >Escribe los números:  </label><br><br>
                 <input id="InputValue1"  type="number" placeholder=" Numero" required><br><br>
-
                 <div class="contornoButton" >
                     <button type="button" onclick="onClickButtonListMediana()">Añadir número</button><br><br>
                     <button type="button" onclick="onClickButtonMediana()">Calcular mediana</button><br><br>

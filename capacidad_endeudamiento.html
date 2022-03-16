@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,10 +41,16 @@
         }
         li:last-child {
             border-right: none;
-            float: right
+            float: right;
         }
         .active {
             background-color: #04AA6D;
+        }
+        .dropbtn {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            background-color: #333;
         }
         h1 {
             margin: 0 50px 0 222px
@@ -118,7 +124,6 @@
         .buttom {
             flex-direction: column;
             display: flex;
-            
         }
         button {
             height: 40px;
@@ -153,7 +158,6 @@
         }
         footer{
             background: #D3ECA7;
-            margin-top: 380px;
             height: 30px;
             font-size: medium;
             font-weight: bold;
@@ -161,97 +165,161 @@
             bottom: 0;
             border-top: 3px solid black;
             position: fixed;
-
         }
-        @media (max-width: 800px) {
-        li a {
-            font-size: x-small;
-        }
-        .container {
-            height: 10vh;
-            width: 100%;
-        }
-        h1 {
-            font-family: sans-serif;
-            font-size: medium;
-            margin-top: 0;
-            letter-spacing: 2px;
-            text-shadow: 2px 4px 10px black;
-            margin: auto;
+        @media (max-width: 1024px) {
+            .navbar {
+                background-color: #333;
+                font-family: Arial;
             }
-        .title_form {
-            display: flex;
-            flex-direction: column;
-        }
-        .lista {
-            width: auto;
-            justify-content: center;
-            display: flex;
-            margin: auto;
-        }
-        img {
-            height: 50px;
-            width: 50px;
-            margin: 40px 20px auto;
-        }
-        .lista img:first-child {
-             margin: 40px 20px auto;
-        }
-        form {
-            width: 70%;
-            margin: 40px auto;
-            height: auto;
+            .navbar a {
+                display: block;
+                transition: all 0.3s ease;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
             }
-        input {
-            width: 100px
-        }
-        .section1 {
-            flex-direction: column;
-            height: 400px;
+            .dropdown {
+                float: left;
+                overflow: hidden;
             }
-        section {
-            width: auto;
-            border-right;
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
             }
-        div section:nth-child(1) {
-            border-right: none;
-        }
-        .result {
-            display: flex;
-            border: 0;
-            border-radius: 0;
-            flex-direction: column;
-            height: auto;
-            text-align: start;
-            margin-bottom: 15px;
-            margin-top: 20px;
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: red;
             }
-        h5 {
-            font-family: arial;
-            font-weight: bold;
-            border-left: 0;
-            font-family: arial;
-            margin-top: 10px;
-            width: 150px;
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: black;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                float: none;
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                font-weight: bold;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: #333;
+            }
+            .dropdown:hover .dropdown-content {
+                margin-top:50px;
+                display: grid;
+            }
         }
-        .section button:nth-child(2) {
-            height: auto;
+        @media (max-width: 650px) {
+            li a {
+                font-size: x-small;
+            }
+            .container {
+                height: 10vh;
+                width: 100%;
+            }
+            h1 {
+                font-family: sans-serif;
+                font-size: medium;
+                margin-top: 0;
+                letter-spacing: 2px;
+                text-shadow: 2px 4px 10px black;
+                margin: auto;
+                }
+            .title_form {
+                display: flex;
+                flex-direction: column;
+            }
+            .lista {
+                width: auto;
+                justify-content: center;
+                display: flex;
+                margin: auto;
+            }
+            img {
+                height: 50px;
+                width: 50px;
+                margin: 40px 20px auto;
+            }
+            .lista img:first-child {
+                margin: 40px 20px auto;
+            }
+            form {
+                width: 70%;
+                margin: 40px auto;
+                height: auto;
+                }
+            input {
+                width: 100px
+            }
+            .section1 {
+                flex-direction: column;
+                height: 400px;
+                }
+            section {
+                width: auto;
+                border-right;
+                }
+            div section:nth-child(1) {
+                border-right: none;
+            }
+            .result {
+                display: flex;
+                border: 0;
+                border-radius: 0;
+                flex-direction: column;
+                height: auto;
+                text-align: start;
+                margin-bottom: 15px;
+                margin-top: 20px;
+                }
+            h5 {
+                font-family: arial;
+                font-weight: bold;
+                border-left: 0;
+                font-family: arial;
+                margin-top: 10px;
+                width: 150px;
+            }
+            .section button:nth-child(2) {
+                height: auto;
+            }
+            footer {
+                position:fixed;
+            }
         }
-        footer {
-            position:fixed;
-        }
-    }
     </style>
 </head>
-
-</head>
 <body>   
-    <ul>
-        <li><a href="./index.html">Menú</a></li>
-        <li><a href="#news">Noticias</a></li>
-        <li><a href="#contact">Contacto</a></li>
-        <li><a class="active" href="#about">Acerca.. </a></li>
-    </ul>       
+    <header>
+        <ul>
+            <div class="dropdown">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <li> <div class="dropbtn">
+                    <i class="fa fa-home"></i></div></li>
+                <div class="dropdown-content">
+                    <li><a href="./index.html">Menú</a></li>
+                    <li><a href="./figuras.html">Calcular Medidas en Figuras Geometricas</a></li>
+                    <li><a href="./descuento.html">Calcular Descuento</a></li>
+                    <li><a href="./media_armonica_aritmetica_ponderada.html">Calcular Media</a></li>
+                    <li><a href="./mediana_moda.html">Calcular Mediana | Moda</a></li>
+                    <li><a class="active" href="./index.html">Gracias.. </a></li>
+                </div>
+            </div>
+        </ul>  
+    </header>      
     <div class="container"> 
         <h1 style="padding: 10px;">CAPACIDAD DE ENDEUDAMIENTO</h1>
         <div class="title_form">
@@ -263,15 +331,9 @@
             <form action="">
                 <div class="section1" >
                     <section>
-                        <label for="">Nombre<br>
-                            <input type="text" id="Name">
-                        </label>
-                        <label for=""><br><br>Ingresos Mensuales<br>
-                            <input type="number" id="Number1">
-                        </label>
-                        <label for=""><br><br>Gastos Mensuales<br>
-                            <input type="number" id="Number2" >
-                        </label>
+                        <label for="">Nombre<br><input type="text" id="Name"></label>
+                        <label for=""><br><br>Ingresos Mensuales<br><input type="number" id="Number1"></label>
+                        <label for=""><br><br>Gastos Mensuales<br><input type="number" id="Number2" ></label>
                     </section>
 
                     <section class="buttom">
@@ -291,7 +353,6 @@
     </div>
     <footer>Solución Reto</footer>  
 </body>
-
 <script src="./capacidad_endeudoamiento.js"></script>
 
 </html>
